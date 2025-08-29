@@ -6,7 +6,7 @@ The project explores how Spark SQL can perform common analytical queries on mill
 
 -----
 
-## \#\# Project Goals
+##  Project Goals
 
   * Understand how Spark interacts with structured data.
   * Write SQL queries in Spark and inspect their execution plans.
@@ -14,7 +14,7 @@ The project explores how Spark SQL can perform common analytical queries on mill
 
 -----
 
-## \#\# Technologies
+##  Technologies
 
   * Python 3.10+
   * Java 8, 11, or 17 (JDK or JRE) — required for Spark
@@ -24,7 +24,7 @@ The project explores how Spark SQL can perform common analytical queries on mill
 
 -----
 
-## \#\# Dataset
+## Dataset
 
   * **File:** `yellow_tripdata_2025-01.parquet`
   * **Source:** NYC TLC Trip Records
@@ -37,7 +37,7 @@ The project explores how Spark SQL can perform common analytical queries on mill
 
 -----
 
-## \#\# How to Run
+## How to Run
 
 1.  **Install dependencies**
     ```bash
@@ -54,9 +54,9 @@ The project explores how Spark SQL can perform common analytical queries on mill
 
 -----
 
-## \#\# Queries Performed
+## Queries Performed
 
-### \#\#\# 1. Average Fare by Hour of Day
+### 1. Average Fare by Hour of Day
 
 **Purpose:** Shows how Spark efficiently groups and aggregates timestamp data.
 
@@ -69,7 +69,7 @@ GROUP BY pickup_hour
 ORDER BY pickup_hour;
 ```
 
-### \#\#\# 2. Top 10 Pickup Zones by Trip Count
+### 2. Top 10 Pickup Zones by Trip Count
 
 **Purpose:** Demonstrates grouping and sorting on a large dataset.
 
@@ -83,7 +83,7 @@ ORDER BY trip_count DESC
 LIMIT 10;
 ```
 
-### \#\#\# 3. Payment Type Distribution
+### 3. Payment Type Distribution
 
 **Purpose:** Shows Spark handling categorical columns and computing percentage shares using window functions.
 
@@ -99,7 +99,7 @@ ORDER BY trips DESC;
 
 -----
 
-## \#\# Performance Comparison: Pandas vs. Spark 🚀
+## Performance Comparison: Pandas vs. Spark 🚀
 
 To highlight Spark’s scalability, we compared the time it takes to compute the average `fare_amount`.
 
@@ -142,7 +142,7 @@ spark.stop()
 
 -----
 
-## \#\# Most Interesting Challenges
+## Most Interesting Challenges
 
   * **Local Spark Configuration:** Ensuring the correct Java and Python environments are set up.
   * **Schema Handling:** Understanding Parquet column types and properly parsing timestamps.
@@ -150,16 +150,10 @@ spark.stop()
 
 -----
 
-## \#\# How to Bundle and Run
+## How to Bundle and Run
 
   * Place `spark_app.py` and the `yellow_tripdata_2025-01.parquet` file in the same directory.
   * Run `python spark_app.py` from your terminal.
   * All queries and results will be printed to the console. No additional configuration is required, as Spark runs in local mode by default.
 
 -----
-
-## \#\# Presentation Notes
-
-  * Show query results alongside the output of Spark's `.explain()` method.
-  * Use screenshots to highlight the runtime differences between the Pandas and Spark computations.
-  * Connect the project to key concepts like SQL execution, query optimization, and distributed systems.
