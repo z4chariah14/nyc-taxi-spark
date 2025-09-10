@@ -99,7 +99,7 @@ ORDER BY trips DESC;
 
 -----
 
-## Performance Comparison: Pandas vs. Spark 🚀
+## Performance Comparison: Pandas vs. Spark 
 
 To highlight Spark’s scalability, we compared the time it takes to compute the average `fare_amount`.
 
